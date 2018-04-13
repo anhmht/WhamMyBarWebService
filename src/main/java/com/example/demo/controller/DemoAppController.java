@@ -89,4 +89,10 @@ public class DemoAppController {
     	return servive.roleUserOrTest();
     }
     
+    @ResponseBody
+    @RequestMapping("/findRoleAdmin")
+    public Role findRoleAdmin() {
+    	return this.roleRepository.findbyRole();
+    }
+    
 }

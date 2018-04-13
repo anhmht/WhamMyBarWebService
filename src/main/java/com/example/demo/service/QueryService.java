@@ -24,11 +24,11 @@ public class QueryService {
 	
 	
 	public List<User> roleUserOrTest() {
-		List<Role> lstRole = new ArrayList();
-		List<User> lstUser = new ArrayList();
+		ArrayList<Role> lstRole = new ArrayList();
+		ArrayList<User> lstUser = new ArrayList();
 		
-		lstRole = (ArrayList) roleRepository.testOr();
-		
+		lstRole = (ArrayList<Role>) roleRepository.testOr();
+		System.out.println("~~~~" + lstRole);
 		for(int i = 0; i < lstUser.size(); i++) {
 			lstUser.add(userRepository.findId(lstRole.get(i).get_id()));
 		}
