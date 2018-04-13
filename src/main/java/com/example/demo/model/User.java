@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import java.util.ArrayList;
+
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -12,6 +14,14 @@ public class User {
 	
 	private String username;
 	private String password;
+	private ArrayList<Role> role_id;
+	
+	public ArrayList<Role> getRole_id() {
+		return role_id;
+	}
+	public void setRole_id(ArrayList<Role> role_id) {
+		this.role_id = role_id;
+	}
 	public ObjectId get_id() {
 		return _id;
 	}
