@@ -11,9 +11,7 @@ import com.example.demo.model.User;
 
 public interface UserRepository extends MongoRepository<User, ObjectId>{
 	List<User> findAll();
-	
-	User findRoleAdmin();
-	
+		
 	
 	@Query(value = "{'role_id._id' : ?0}")
 	User findId(ObjectId id);
